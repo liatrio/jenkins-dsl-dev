@@ -65,7 +65,7 @@ for( component in components ) {
     out.println("Using folders = " + USE_FOLDERS)
     //should be true if the plugin exists
   }
-  
+
   def deploymentEnvironments = component.deploymentEnvironments
   for(env in deploymentEnvironments) {
     createDeployJob(component.productName, component.scmProject, env)
@@ -127,7 +127,7 @@ def createDeployJob(productName, projectName, environment) {
             includeTestSummary(true)
             includeCustomMessage(false)
             customMessage(null)
-            buildServerUrl(null)
+            authTokenCredentialId('')
             sendAs(null)
             commitInfoChoice('AUTHORS_AND_TITLES')
             teamDomain(null)
@@ -229,7 +229,7 @@ def createBuildJob(component) {
                     includeTestSummary(true)
                     includeCustomMessage(false)
                     customMessage(null)
-                    buildServerUrl(null)
+                    authTokenCredentialId('')
                     sendAs(null)
                     commitInfoChoice('AUTHORS_AND_TITLES')
                     teamDomain(null)
