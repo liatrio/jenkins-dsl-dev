@@ -1,0 +1,115 @@
+FROM jenkins
+MAINTAINER Robert Kelly <robert@liatrio.com>
+
+USER root
+
+ADD basic-security.groovy /usr/share/jenkins/ref/init.groovy.d/basic-security.groovy
+
+USER ${user}
+
+RUN /usr/local/bin/install-plugins.sh \
+    ace-editor \
+    ansicolor \
+    ant \
+    antisamy-markup-formatter \
+    artifactory \
+    bitbucket \
+    bouncycastle-api \
+    branch-api \
+    build-environment \
+    build-name-setter \
+    build-timestamp \
+    build-user-vars-plugin \
+    cloudbees-folder \
+    cloudfoundry \
+    clover \
+    cobertura \
+    conditional-buildstep \
+    config-file-provider \
+    copy-project-link \
+    credentials-binding \
+    credentials \
+    crowd2 \
+    cvs \
+    display-url-api \
+    durable-task \
+    email-ext \
+    envinject \
+    external-monitor-job \
+    flexible-publish \
+    git-client \
+    git-server \
+    git \
+    github-api \
+    github-branch-source \
+    github-organization-folder \
+    github \
+    gradle \
+    greenballs \
+    groovy \
+    handlebars \
+    hipchat \
+    htmlpublisher \
+    ivy \
+    javadoc \
+    jenkins-jira-issue-updater \
+    jira-ext \
+    jira \
+    job-dsl \
+    jobConfigHistory \
+    jquery-detached \
+    jquery \
+    junit \
+    ldap \
+    mailer \
+    mapdb-api \
+    mask-passwords \
+    matrix-auth \
+    matrix-project \
+    maven-plugin \
+    mercurial \
+    momentjs \
+    naginator \
+    nvm-wrapper \
+    pam-auth \
+    parameterized-trigger \
+    pipeline-build-step \
+    pipeline-graph-analysis \
+    pipeline-input-step \
+    pipeline-milestone-step \
+    pipeline-rest-api \
+    pipeline-stage-step \
+    pipeline-stage-view \
+    plain-credentials \
+    read-only-configurations \
+    resource-disposer \
+    role-strategy \
+    scm-api \
+    script-security \
+    selenium \
+    sonar \
+    ssh-agent \
+    ssh-credentials \
+    ssh-slaves \
+    stash-pullrequest-builder \
+    structs \
+    subversion \
+    testng-plugin \
+    text-finder \
+    token-macro \
+    translation \
+    windows-slaves \
+    workflow-aggregator \
+    workflow-api \
+    workflow-basic-steps \
+    workflow-cps-global-lib \
+    workflow-cps \
+    workflow-durable-task-step \
+    workflow-job \
+    workflow-multibranch \
+    workflow-scm-step \
+    workflow-step-api \
+    workflow-support \
+    ws-cleanup
+
+COPY seedjob.xml /usr/share/jenkins/ref/jobs/seedjob/config.xml

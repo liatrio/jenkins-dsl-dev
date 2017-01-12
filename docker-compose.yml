@@ -1,0 +1,12 @@
+version: '2'
+services:
+    jenkins-server:
+        build: ./jenkins
+        volumes:
+            - /var/jenkins_home/
+            - .:/var/jenkins_home/localdev
+        environment:
+            - JAVA_OPTS="-Djenkins.install.runSetupWizard=false"
+        ports:
+            - "8080:8080"
+            - "50000:50000"

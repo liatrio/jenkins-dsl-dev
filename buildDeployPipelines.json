@@ -1,0 +1,22 @@
+{
+ "components": [
+   {
+      "scmProject": "liatrio",
+      "productName": "Hygieia",
+      "deploymentEnvironments": ["dev"],
+      "ciEnvironments": ["dev"]
+   },
+   {
+      "scmProject": "liatrio",
+      "productName": "theia-ui",
+      "deploymentEnvironments": ["dev"],
+      "ciEnvironments": ["dev"]
+   },
+   {
+      "scmProject": "liatrio",
+      "productName": "game-of-life",
+      "deploymentEnvironments": ["dev"],
+      "ciEnvironments": ["dev"]
+   }
+ ]
+}
