@@ -84,9 +84,11 @@ RUN /usr/local/bin/install-plugins.sh \
     read-only-configurations \
     resource-disposer \
     role-strategy \
+    s3 \
     scm-api \
     script-security \
     selenium \
+    slack \
     sonar \
     ssh-agent \
     ssh-credentials \

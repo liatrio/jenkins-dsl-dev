@@ -18,7 +18,7 @@ boolean getFoldersVariable() {
   }
   catch (Exception ex) {
     out.println("Environment variable not found for USE_FOLDERS.  Defaulting to standard job list")
-    return false // Defaulting to no FOLDERS
+    return true // Defaulting to use FOLDERS
   }
 }
 
